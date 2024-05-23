@@ -1,0 +1,139 @@
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progetto Videogioco</title>
+    <style>
+        body {
+            background-color: purple;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, main, footer {
+            padding: 20px;
+        }
+        header {
+            background-color: #4B0082;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        p, a, button {
+            font-size: 18px;
+        }
+        a {
+            color: lightblue;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer p {
+            font-size: 14px;
+        }
+        .btn {
+            background-color: lightblue;
+            border: none;
+            color: purple;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+        #language-buttons {
+            display: flex;
+        }
+        main {
+            background-color: #5E2E82;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        footer {
+            text-align: center;
+            background-color: #4B0082;
+            padding: 20px;
+        }
+        footer img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+    <script>
+        function changeLanguage(language) {
+            var italianContent = document.getElementById('italian-content');
+            var englishContent = document.getElementById('english-content');
+            if (language === 'en') {
+                italianContent.style.display = 'none';
+                englishContent.style.display = 'block';
+            } else {
+                italianContent.style.display = 'block';
+                englishContent.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body onload="changeLanguage('it')">
+    <header>
+        <div id="language-buttons">
+            <button class="btn" onclick="changeLanguage('en')">English</button>
+            <button class="btn" onclick="changeLanguage('it')">Italiano</button>
+        </div>
+        <a id="home-button" class="btn" href="Home.html">Home</a>
+    </header>
+    <main>
+        <div id="italian-content">
+            <h1>Una casa domotica, anche conosciuta come "smart home" o "casa intelligente", è un'abitazione dotata di tecnologie avanzate che consentono di automatizzare, monitorare e controllare diverse funzioni della casa tramite dispositivi interconnessi e spesso gestiti da remoto tramite smartphone, tablet o computer.</h1>
+            <p>Ecco alcune delle principali funzionalità che una casa domotica può offrire:</p>
+            <ul>
+                <li>Controllo dell'illuminazione: Permette di accendere, spegnere o regolare l'intensità delle luci in diverse stanze della casa tramite comandi vocali, app mobili o programmando orari specifici.</li>
+                <li>Gestione della temperatura: I termostati intelligenti possono regolare la temperatura della casa in base alle preferenze degli abitanti, all'orario del giorno e alla presenza in casa, contribuendo al risparmio energetico.</li>
+                <li>Sicurezza e sorveglianza: Include sistemi di allarme, telecamere di sorveglianza, serrature intelligenti e rilevatori di fumo o gas. Questi dispositivi possono essere monitorati e controllati da remoto, offrendo notifiche immediate in caso di attività sospette.</li>
+                <li>Controllo degli elettrodomestici: Permette di gestire elettrodomestici come frigoriferi, lavatrici, forni e lavastoviglie tramite comandi remoti o programmando il loro funzionamento per ottimizzare il consumo energetico.</li>
+                <li>Intrattenimento: I sistemi di intrattenimento possono essere integrati per controllare televisori, impianti audio e altri dispositivi multimediali da un'unica piattaforma, facilitando la gestione di contenuti e volumi.</li>
+                <li>Automazione delle persiane e delle tende: È possibile programmare l'apertura e la chiusura di persiane e tende in base all'orario del giorno, alla quantità di luce solare o alla temperatura.</li>
+                <li>Gestione energetica: Monitoraggio e ottimizzazione del consumo energetico grazie a sistemi che analizzano l'uso dell'energia e suggeriscono modi per ridurre sprechi e costi.</li>
+                <li>Controllo dell'irrigazione: Sistemi di irrigazione intelligenti possono regolare la quantità di acqua fornita alle piante in base alle condizioni meteorologiche e al tipo di vegetazione, risparmiando acqua e mantenendo il giardino in perfetta forma.</li>
+                <li>Interazione vocale: Utilizzo di assistenti vocali come Amazon Alexa, Google Assistant o Apple Siri per controllare vari dispositivi e funzionalità della casa tramite comandi vocali.</li>
+                <li>Accesso remoto: Controllo e monitoraggio di tutti i sistemi della casa da qualsiasi luogo tramite una connessione internet, permettendo di verificare lo stato della casa e intervenire in caso di necessità.</li>
+            </ul>
+            <p>Queste funzionalità non solo migliorano il comfort e la convenienza degli abitanti, ma possono anche contribuire a una maggiore efficienza energetica e sicurezza.</p>
+            <a href="Progetto1.html">Progetto1</a>
+        </div>
+        <div id="english-content" style="display: none;">
+            <h1>A smart home, also known as an "intelligent home" or "smart house", is a residence equipped with advanced technologies that allow you to automate, monitor, and control various functions of the house through interconnected devices, often managed remotely via smartphones, tablets, or computers.</h1>
+            <p>Here are some of the main features that a smart home can offer:</p>
+            <ul>
+                <li>Lighting control: Allows you to turn on, off, or adjust the intensity of lights in different rooms of the house via voice commands, mobile apps, or by scheduling specific times.</li>
+                <li>Temperature management: Smart thermostats can regulate the temperature of the house based on the preferences of the inhabitants, the time of day, and presence in the house, contributing to energy savings.</li>
+                <li>Security and surveillance: Includes alarm systems, surveillance cameras, smart locks, and smoke or gas detectors. These devices can be monitored and controlled remotely, providing immediate notifications in case of suspicious activity.</li>
+                <li>Appliance control: Allows you to manage appliances such as refrigerators, washing machines, ovens, and dishwashers via remote commands or by scheduling their operation to optimize energy consumption.</li>
+                <li>Entertainment: Entertainment systems can be integrated to control televisions, audio systems, and other multimedia devices from a single platform, making it easier to manage content and volumes.</li>
+                <li>Automation of shutters and blinds: It is possible to schedule the opening and closing of shutters and blinds based on the time of day, the amount of sunlight, or the temperature.</li>
+                <li>Energy management: Monitoring and optimization of energy consumption thanks to systems that analyze energy use and suggest ways to reduce waste and costs.</li>
+                <li>Irrigation control: Smart irrigation systems can regulate the amount of water provided to plants based on weather conditions and the type of vegetation, saving water and keeping the garden in perfect shape.</li>
+                <li>Voice interaction: Use of voice assistants like Amazon Alexa, Google Assistant, or Apple Siri to control various devices and functions of the house via voice commands.</li>
+                <li>Remote access: Control and monitoring of all house systems from anywhere via an internet connection, allowing you to check the status of the house and intervene if necessary.</li>
+            </ul>
+            <p>These features not only improve the comfort and convenience of the inhabitants but can also contribute to greater energy efficiency and security.</p>
+            <a href="Progetto1.html">Project1</a>
+        </div>
+    </main>
+    <footer>
+        <img src="CasaDomodica.jpg" height="300" alt="CasaDomodica">
+        <p>&copy; 2024 Pasquale Zaccagnino. All rights reserved.</p>
+    </footer>
+</body>
+</html>

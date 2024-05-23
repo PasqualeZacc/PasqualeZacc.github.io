@@ -1,0 +1,182 @@
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Mio Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        nav button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            background-color: white;
+            color: #4CAF50;
+            border: none;
+            cursor: pointer;
+        }
+        nav button:hover {
+            background-color: #ddd;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+        }
+        #about {
+            display: flex;
+            align-items: center;
+        }
+        #about img {
+            max-width: 300px;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+        .project {
+            margin-bottom: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+    <script>
+        // Dati di traduzione
+        const translations = {
+            it: {
+                nav_about: "Chi Sono",
+                nav_projects: "Progetti",
+                nav_contact: "Contatti",
+                about_heading: "Benvenuto nel Mio Portfolio!",
+                about_text: "Mi chiamo Pasquale Zaccagnino e sono uno studente presso l'IIS Einstein De Lorenzo. Sono appassionato del lato hardware del PC e per hobby aggiusto i PC. Partecipo a comunità online dove discuto di hardware e condivido le mie conoscenze. Ho esperienza con software di monitoraggio delle prestazioni e di diagnostica hardware. Ho collaborato con altri appassionati e professionisti del settore per risolvere problemi. Ho familiarità con le ultime tendenze e tecnologie nel campo dell'hardware dei computer, come ad esempio l'intelligenza artificiale. E faccio parte del gruppo dei beta tester degli insider della Microsoft Corporation sezione Xbox e di tanto in tanto per hobbye streammo su twitch.",
+                projects_heading: "Progetti",
+                project1_heading: "Progetto 1",
+                project1_text: "Descrizione del progetto 1: in colaborazione con i miei compagni di classe ho realizato un plastico di una casa Domotica.",
+                project1_link: "Plastico Casa Domotica",
+                project2_heading: "Progetto 2",
+                project2_text: "Descrizione del progetto 2: Insieme ad alcuni dei miei compagni di classe abbiamo collaborato per la creazione di un videogioco col motore grafico Unity.",
+                project2_link: "Informatica Per Gioco",
+                contact_heading: "Contatti",
+                contact_text: "Se vuoi contattarmi, puoi inviarmi una email a: ",
+                discord_text: "Oppure puoi contattarmi su Discord dal seguente link: ",
+                email: "pzaccagnino2@gmail.com",
+                discord_link: "https://discord.com/invite/X2gYmmJE",
+                footer_text: "&copy; 2024 Pasquale Zaccagnino. Tutti i diritti riservati."
+            },
+            en: {
+                nav_about: "About Me",
+                nav_projects: "Projects",
+                nav_contact: "Contact",
+                about_heading: "Welcome to My Portfolio!",
+                about_text: "My name is Pasquale Zaccagnino and I am a student at IIS Einstein De Lorenzo. I am passionate about the hardware side of PCs and I enjoy fixing computers as a hobby. I participate in online communities where I discuss hardware and share my knowledge. I have experience with performance monitoring software and hardware diagnostics. I have collaborated with other enthusiasts and professionals in the field to solve problems. I am familiar with the latest trends and technologies in computer hardware, such as artificial intelligence. I am part of the Microsoft Corporation's Xbox insider beta tester group.",
+                projects_heading: "Projects",
+                project1_heading: "Project 1",
+                project1_text: "Description of Project 1: in collaboration with my classmates, I created a model of a Smart Home.",
+                project1_link: "Smart Home Model",
+                project2_heading: "Project 2",
+                project2_text: "Description of Project 2: Together with some of my classmates, we collaborated to create a video game with the Unity graphics engine.",
+                project2_link: "Game Development with Unity",
+                contact_heading: "Contact",
+                contact_text: "If you'd like to contact me, you can send me an email at: ",
+                discord_text: "Or you can contact me on Discord through this link: ",
+                email: "pzaccagnino2@gmail.com",
+                discord_link: "https://discord.com/invite/X2gYmmJE",
+                footer_text: "&copy; 2024 Pasquale Zaccagnino. All rights reserved."
+            }
+        };
+
+        // Funzione per cambiare la lingua
+        function changeLanguage(lang) {
+            document.getElementById("nav_about").textContent = translations[lang].nav_about;
+            document.getElementById("nav_projects").textContent = translations[lang].nav_projects;
+            document.getElementById("nav_contact").textContent = translations[lang].nav_contact;
+            document.getElementById("about_heading").textContent = translations[lang].about_heading;
+            document.getElementById("about_text").textContent = translations[lang].about_text;
+            document.getElementById("projects_heading").textContent = translations[lang].projects_heading;
+            document.getElementById("project1_heading").textContent = translations[lang].project1_heading;
+            document.getElementById("project1_text").textContent = translations[lang].project1_text;
+            document.getElementById("project1_link").textContent = translations[lang].project1_link;
+            document.getElementById("project2_heading").textContent = translations[lang].project2_heading;
+            document.getElementById("project2_text").textContent = translations[lang].project2_text;
+            document.getElementById("project2_link").textContent = translations[lang].project2_link;
+            document.getElementById("contact_heading").textContent = translations[lang].contact_heading;
+            document.getElementById("contact_text").innerHTML = translations[lang].contact_text + `<a href="mailto:${translations[lang].email}">${translations[lang].email}</a>`;
+            document.getElementById("discord_text").innerHTML = translations[lang].discord_text + `<a href="${translations[lang].discord_link}">${translations[lang].discord_link}</a>`;
+            document.getElementById("footer_text").innerHTML = translations[lang].footer_text;
+        }
+    </script>
+</head>
+<body onload="changeLanguage('it')">
+    <header>
+        <nav>
+            <ul>
+                <li><a id="nav_about" href="#about">Chi Sono</a></li>
+                <li><a id="nav_projects" href="#projects">Progetti</a></li>
+                <li><a id="nav_contact" href="#contact">Contatti</a></li>
+            </ul>
+            <button onclick="changeLanguage('it')">Italiano</button>
+            <button onclick="changeLanguage('en')">English</button>
+        </nav>
+    </header>
+
+    <section id="about">
+        <img src="Pasix26.jpg" height="300" alt="Pasquale Zaccagnino">
+        <div>
+            <h1 id="about_heading">Benvenuto nel Mio Portfolio!</h1>
+            <p id="about_text">Mi chiamo Pasquale Zaccagnino e sono uno studente presso l'IIS Einstein De Lorenzo. Sono appassionato del lato hardware del PC e per hobby aggiusto i PC. Partecipo a comunità online dove discuto di hardware e condivido le mie conoscenze. Ho esperienza con software di monitoraggio delle prestazioni e di diagnostica hardware. Ho collaborato con altri appassionati e professionisti del settore per risolvere problemi. Ho familiarità con le ultime tendenze e tecnologie nel campo dell'hardware dei computer, come ad esempio l'intelligenza artificiale. E faccio parte del gruppo dei beta tester degli insider della Microsoft Corporation sezione Xbox e di tanto in tanto per hobbye streammo su twitch.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 id="projects_heading">Progetti</h2>
+        <div class="project">
+            <h3 id="project1_heading">Progetto 1</h3>
+            <p id="project1_text">Descrizione del progetto 1: in colaborazione con i miei compagni di classe ho realizato un plastico di una casa Domotica.</p>
+            <a id="project1_link" href="Progetto1.html">Plastico Casa Domodica</a>
+        </div>
+        <div class="project">
+            <h3 id="project2_heading">Progetto 2</h3>
+            <p id="project2_text">Insieme ad alcuni dei miei compagni di classe abbiamo collaborato per la creazione di un videogioco col motore grafico Unity.</p>
+            <a id="project2_link" href="Progetto2.html">Informatica Per Gioco</a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 id="contact_heading">Contatti</h2>
+        <p id="contact_text">Se vuoi contattarmi, puoi inviarmi una email a: <a href="mailto:pzaccagnino2@gmail.com">pzaccagnino2@gmail.com</a></p>
+        <p id="discord_text">Oppure puoi contattarmi su Discord dal seguente link: <a href="https://discord.com/invite/X2gYmmJE">https://discord.com/invite/X2gYmmJE</a></p>
+    </section>
+
+    <footer>
+        <p id="footer_text">&copy; 2024 Pasquale Zaccagnino. Tutti i diritti riservati.</p>
+    </footer>
+</body>
+</html>

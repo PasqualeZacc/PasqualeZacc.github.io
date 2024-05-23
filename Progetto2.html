@@ -1,0 +1,117 @@
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progetto Videogioco</title>
+    <style>
+        body {
+            background-color: green;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, main, footer {
+            margin: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        a, button {
+            font-size: 18px;
+            color: lightblue;
+            text-decoration: none;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+        a:hover, button:hover {
+            text-decoration: underline;
+        }
+        footer p {
+            font-size: 14px;
+        }
+        #home-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: lightblue;
+            border: none;
+            color: green;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        #home-button:hover {
+            background-color: #87ceeb;
+        }
+        #language-buttons {
+            margin-top: 20px;
+        }
+        #language-buttons button {
+            margin-right: 10px;
+            padding: 10px 20px;
+            background-color: lightblue;
+            border: none;
+            color: green;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #language-buttons button:hover {
+            background-color: #87ceeb;
+        }
+        video {
+            width: 100%;
+            max-width: 640px;
+            height: auto;
+        }
+    </style>
+</head>
+<body onload="changeLanguage('it')">
+    <header>
+        <h1 id="header-text">Insieme ad alcuni dei miei compagni di classe abbiamo collaborato per la creazione di un videogioco col motore grafico Unity</h1>
+        <a id="home-button" href="Home.html">Home</a>
+        <div id="language-buttons">
+            <button onclick="changeLanguage('it')">Italiano</button>
+            <button onclick="changeLanguage('en')">English</button>
+        </div>
+    </header>
+    
+    <main>
+        <div id="italian-content">
+            <a href="Progetto2.html">Progetto2</a>
+            <video width="640" height="360" controls autoplay loop muted>
+                <source src="VideoGioco.mp4" type="video/mp4" alt="Il tuo browser non supporta il tag video.">
+            </video>
+        </div>
+        <div id="english-content" style="display: none;">
+            <a href="Progetto2.html">Project2</a>
+        </div>
+    </main>
+    
+    <footer>
+        <p id="footer_text">&copy; 2024 Pasquale Zaccagnino. Tutti i diritti riservati.</p>
+    </footer>
+    <script>
+        function changeLanguage(language) {
+            var italianContent = document.getElementById('italian-content');
+            var englishContent = document.getElementById('english-content');
+            var headerText = document.getElementById('header-text');
+            var footerText = document.getElementById('footer_text');
+            if (language === 'en') {
+                italianContent.style.display = 'none';
+                englishContent.style.display = 'block';
+                headerText.innerText = "Together with some of my classmates, we collaborated to create a video game with the Unity graphics engine";
+                footerText.innerText = "© 2024 Pasquale Zaccagnino. All rights reserved.";
+            } else {
+                italianContent.style.display = 'block';
+                englishContent.style.display = 'none';
+                headerText.innerText = "Insieme ad alcuni dei miei compagni di classe abbiamo collaborato per la creazione di un videogioco col motore grafico Unity";
+                footerText.innerText = "© 2024 Pasquale Zaccagnino. Tutti i diritti riservati.";
+            }
+        }
+    </script>
+</body>
+</html>
