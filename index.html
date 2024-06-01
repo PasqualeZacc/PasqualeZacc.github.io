@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
@@ -84,6 +85,9 @@
                 project2_heading: "Progetto 2",
                 project2_text: "Descrizione del progetto 2: Insieme ad alcuni dei miei compagni di classe abbiamo collaborato per la creazione di un videogioco col motore grafico Unity.",
                 project2_link: "Informatica Per Gioco",
+                project3_heading: "Progetto 3",
+                project3_text: "Questo sito web è un elenco di mod di Minecraft.",
+                project3_link: "Minecraft mod",
                 contact_heading: "Contatti",
                 contact_text: "Se vuoi contattarmi, puoi inviarmi una email a: ",
                 discord_text: "Oppure puoi contattarmi su Discord dal seguente link: ",
@@ -104,6 +108,9 @@
                 project2_heading: "Project 2",
                 project2_text: "Description of Project 2: Together with some of my classmates, we collaborated to create a video game with the Unity graphics engine.",
                 project2_link: "Game Development with Unity",
+                project3_heading: "Project 3",
+                project3_text: "This website is a list of Minecraft mods.",
+                project3_link: "Minecraft mod",
                 contact_heading: "Contact",
                 contact_text: "If you'd like to contact me, you can send me an email at: ",
                 discord_text: "Or you can contact me on Discord through this link: ",
@@ -127,6 +134,9 @@
             document.getElementById("project2_heading").textContent = translations[lang].project2_heading;
             document.getElementById("project2_text").textContent = translations[lang].project2_text;
             document.getElementById("project2_link").textContent = translations[lang].project2_link;
+            document.getElementById("project3_heading").textContent = translations[lang].project3_heading;
+            document.getElementById("project3_text").textContent = translations[lang].project3_text;
+            document.getElementById("project3_link").textContent = translations[lang].project3_link;
             document.getElementById("contact_heading").textContent = translations[lang].contact_heading;
             document.getElementById("contact_text").innerHTML = translations[lang].contact_text + `<a href="mailto:${translations[lang].email}">${translations[lang].email}</a>`;
             document.getElementById("discord_text").innerHTML = translations[lang].discord_text + `<a href="${translations[lang].discord_link}">${translations[lang].discord_link}</a>`;
@@ -160,12 +170,17 @@
         <div class="project">
             <h3 id="project1_heading">Progetto 1</h3>
             <p id="project1_text">Descrizione del progetto 1: in colaborazione con i miei compagni di classe ho realizato un plastico di una casa Domotica.</p>
-            <a id="project1_link" href="Progetto1.html">Plastico Casa Domodica</a>
+            <a id="project1_link" href="Progetto1.html">Plastico Casa Domotica</a>
         </div>
         <div class="project">
             <h3 id="project2_heading">Progetto 2</h3>
-            <p id="project2_text">Insieme ad alcuni dei miei compagni di classe abbiamo collaborato per la creazione di un videogioco col motore grafico Unity.</p>
+            <p id="project2_text">Descrizione del progetto 2: Insieme ad alcuni dei miei compagni di classe abbiamo collaborato per la creazione di un videogioco col motore grafico Unity.</p>
             <a id="project2_link" href="Progetto2.html">Informatica Per Gioco</a>
+        </div>
+        <div class="project">
+            <h3 id="project3_heading">Progetto 3</h3>
+            <p id="project3_text">Questo sito web è un elenco di mod di Minecraft.</p>
+            <a id="project3_link" href="Minecraft/Sito.html">Minecraft mod</a>
         </div>
     </section>
 
